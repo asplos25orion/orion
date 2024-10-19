@@ -1,0 +1,21 @@
+comment: "YOLOv1 Parameter Set"
+
+ckks_params:
+  LogN: 16
+  LogQ: [55, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40]
+  LogP: [61, 61, 61, 61]
+  LogScale: 40
+  H: 16384
+
+boot_params:
+  LogP: [61, 61, 61, 61, 61, 61, 61, 61]
+
+orion:
+  batch_size: 1
+  margin: 4 # >= 1
+  packing_method: advanced # [beginner, intermediate, advanced]
+  embedding_method: square
+  
+  diags_path: "diagonals.h5" # "path/to/diags" | ""
+  evks_path: "keys.h5" # "path/to/keys" | ""
+  io_mode: "save" # "load" | "save" | "none"
